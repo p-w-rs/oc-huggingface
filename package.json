@@ -1,0 +1,62 @@
+{
+  "name": "oc-huggingface",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "description": "Hugging Face for OpenCode agents: browser sign-in or token, Hub actions, the token supplied to hf, git and scripts, per-account permissions and built-in know-how",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/p-w-rs/oc-huggingface.git"
+  },
+  "homepage": "https://github.com/p-w-rs/oc-huggingface#readme",
+  "bugs": {
+    "url": "https://github.com/p-w-rs/oc-huggingface/issues"
+  },
+  "exports": {
+    ".": "./plugin/index.ts",
+    "./gui-experimental": "./dist/gui-experimental.cjs"
+  },
+  "files": [
+    "plugin/*.ts",
+    "plugin/*.tsx",
+    "!plugin/*.test.ts",
+    "!plugin/test*.ts",
+    "dist/gui-experimental.cjs",
+    "vendor",
+    "scripts/*.mjs",
+    "docs",
+    "README.md",
+    "pixi.toml",
+    "pixi.lock",
+    "npm-shrinkwrap.json",
+    "tsconfig.json",
+    "vite.config.ts",
+    "skill"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node --import tsx --test plugin/*.test.ts scripts/*.test.ts",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "jsonc-parser": "3.3.1",
+    "oc-secure-kit": "file:vendor/oc-secure-kit-1.1.0.tgz"
+  },
+  "devDependencies": {
+    "@opencode/plugin": "2.2.6",
+    "@types/node": "24.10.0",
+    "solid-js": "1.9.18",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vite": "8.3.6",
+    "vite-plugin-solid": "2.11.15"
+  }
+}
