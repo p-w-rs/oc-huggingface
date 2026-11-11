@@ -9,7 +9,7 @@ import { ACCESS, DEFAULT_HUB, DEFAULT_MCP, OAUTH, planCommand, REFRESH, SECRET_N
 import { AccountStore } from "./store.js"
 
 export const PLUGIN_ID = "oc-huggingface"
-export const VERSION = "1.0.0"
+export const VERSION = "1.0.1"
 const SERVICE = "Hugging Face"
 /** Everything an agent may need; the user still chooses organizations on the consent page. */
 const SCOPES = ["openid", "profile", "email", "read-mcp", "read-repos", "write-repos", "manage-repos", "gated-repos", "contribute-repos", "read-memberships", "inference-api", "jobs", "write-discussions"]
